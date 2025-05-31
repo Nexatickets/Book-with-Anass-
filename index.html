@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book with Anass</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-size: 1rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .checkbox-group, .contact-methods {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    @media (max-width: 600px) {
+      .container {
+        margin: 15px;
+        padding: 15px;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      label, input, select, textarea, button {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Book with Anass</h2>
+    <form action="https://formsubmit.co/anass.reservation@gmail.com" method="POST">
+      <label for="name">Passenger Name</label>
+      <input type="text" name="Passenger Name" id="name" required>
+
+      <label for="trip">Trip Type</label>
+      <select name="Trip Type" id="trip" required>
+        <option value="One Way">One Way</option>
+        <option value="Round Trip">Round Trip</option>
+      </select>
+
+      <label for="from">Departing From</label>
+      <input list="airports" name="Departing From" id="from" required>
+
+      <label for="to">Destination</label>
+      <input list="airports" name="Destination" id="to" required>
+
+      <datalist id="airports">
+        <option value="Kotoka International Airport, Accra (ACC), Ghana">
+        <option value="Heathrow Airport, London (LHR), UK">
+        <option value="John F. Kennedy International Airport, New York (JFK), USA">
+        <option value="Dubai International Airport (DXB), UAE">
+        <option value="Changi Airport, Singapore (SIN)">
+      </datalist>
+
+      <label for="departure">Departure Date</label>
+      <input type="date" name="Departure Date" id="departure" required>
+
+      <label for="return">Return Date (if Round Trip)</label>
+      <input type="date" name="Return Date" id="return">
+
+      <label>Adults</label>
+      <input type="number" name="Adults" min="0" value="0">
+
+      <label>Children</label>
+      <input type="number" name="Children" min="0" value="0">
+
+      <label>Minors</label>
+      <input type="number" name="Minors" min="0" value="0">
+
+      <label>Preferred Contact Method</label>
+      <div class="contact-methods">
+        <label><input type="checkbox" name="Contact Method" value="WhatsApp"> WhatsApp</label>
+        <label><input type="checkbox" name="Contact Method" value="Email"> Email</label>
+      </div>
+
+      <label for="additional">Additional Information (Optional)</label>
+      <textarea name="Additional Information" id="additional" rows="4"></textarea>
+
+      <label for="airline">Airline Preference</label>
+      <select name="Airline Preference" id="airline">
+        <option value="Any (Cheapest Option)">Any (Cheapest Option)</option>
+        <option value="Emirates">Emirates</option>
+        <option value="Qatar Airways">Qatar Airways</option>
+        <option value="KLM">KLM</option>
+        <option value="British Airways">British Airways</option>
+        <option value="Ethiopian Airlines">Ethiopian Airlines</option>
+      </select>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </div>
+</body>
+</html>
